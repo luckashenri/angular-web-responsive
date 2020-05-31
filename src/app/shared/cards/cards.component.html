@@ -1,0 +1,21 @@
+<ul class="cards">
+  <li class="cards__item" *ngFor="let item of payload">
+    <div class="card">
+      <div class="card__image">
+        <img [src]="item.imgUrl" alt="Product"/>
+        <div class="card__image--title overlay-title to-uppercase">
+          {{ item.title}}
+        </div>
+      </div>
+      <div class="card__additional">
+        <button class="card__additional--button btn">Buy now</button>
+        <div class="card__additional--price overlay">{{ item.price}}</div>
+      </div>
+      <div class="card__content truncate-text">
+        <div class="card__content--title">{{ item.subtitle}}</div>
+        <div class="card__content--detail">{{ item.price}}</div>
+        <p class="card__content--text break-line">{{ item.description}}</p>
+      </div>
+    </div>
+  </li>
+</ul>
